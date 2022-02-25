@@ -1,26 +1,1 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import React, {ChangeEvent, useState, useRef} from 'react';import s from './Css.module.css'// function App() {////     const [num, setNum] = useState('0')////     const incr = Number(num) + 1//     const [maxValue, setMaxValue] = useState('5')//     const [minValue, setMinValue] = useState('0')////     const onClickIncrHandler = () => {//         setNum(incr)//     }//     const onClickResHandler = () => {//         setNum('0')//     }//     const onClickApplyHandler =()=>{//         //localstorage//     }//     const onChangeMax = (e : ChangeEvent<HTMLInputElement>) => {//         setMaxValue(e.currentTarget.value)//     }//     const onChangeMin = (e : ChangeEvent<HTMLInputElement>) => {//         setNum(e.currentTarget.value)//     }////     return (//         <div className={s.wrapper}>//             <div className={s.settings}>//                 <input  onChange={onChangeMax} type="number"/>//                 <input  onChange={onChangeMin} type="number"/>//                 <button onClick={onClickApplyHandler}>apply</button>//             </div>//             <div className={s.null}></div>//             <div className={s.window}>//                 <div className={s.wrapperSpan}>//                     <span> {Number(num)} </span>//                 </div>//                 <button onClick={onClickIncrHandler}>inc</button>//                 <button onClick={onClickResHandler}>res</button>//             </div>//         </div>//     );// }function App() {    const [increment, setIncrement] = useState(0)    const [range, setRage] = useState<any>({numMax: 5, numMin: 0})    const numMaxRef = useRef<any>({current: null})    const numMinRef = useRef<any>({current: null})    const numMax = (e: ChangeEvent<HTMLInputElement>) => e.currentTarget.value    const numMin = (e: ChangeEvent<HTMLInputElement>) => e.currentTarget.value    const onClickApplyHundler = () => {        setRage({numMax: numMaxRef.current.value, numMin: numMinRef.current.value})        setIncrement(range.numMin)    }    return (        <div className={s.wrapper}>            <div className={s.settings}>                <input ref={numMaxRef} onChange={numMax} type="number"/>                <input ref={numMinRef} onChange={numMin} type="number"/>                <button onClick={onClickApplyHundler}>apply</button>            </div>            <div className={s.null}>            </div>            <div className={s.window}>                <div className={s.wrapperSpan}>                    <span> {increment}</span>                </div>                <button>inc</button>                <button>res</button>            </div>        </div>    );}export default App;
