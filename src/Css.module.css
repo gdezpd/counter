@@ -1,44 +1,1 @@
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30vh;
-
-}
-
-.settings {
-    width: 200px;
-    height: 100px;
-    background-color: #282c34;
-    text-align: center;
-}
-
-.null {
-    width: 50px;
-}
-
-.window {
-    width: 200px;
-    height: 100px;
-    background-color: #282c34;
-    text-align: center;
-
-}
-
-.wrapperSpan {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: aliceblue;
-    margin: 10px auto;
-
-}
-
-.opacity{
-    opacity: 0.95;
-}
-
-
+.wrapper {    display: flex;    align-items: center;    justify-content: center;    margin-top: 30vh;}.settings {    display: flex;    align-items: center;    justify-content: center;    flex-direction: column;    width: 220px;    height: 140px;    background-color: aliceblue;    padding: 10px;}.null {    width: 50px;}.window {    width: 220px;    height: 140px;    background-color: aliceblue;    text-align: center;    padding: 10px;}.wrapperSpan {    display: flex;    align-items: center;    justify-content: center;    border-radius: 5px;    background-color: aliceblue;    margin: 10px auto;}.spanTrue {    width: 80px;    height: 30px;    font-size: 30px;    margin-bottom: 20px;}.spanFalse {    /*position: relative;*/    margin-top: 38px;    font-size: 30px;}.inputLabel {    display: block;    color: aliceblue;    width: 145px;    margin: 0 auto;}.inputValue {    width: 90px;    margin-left: 5px;}.buttonValue {    display: block;    margin: 14px auto;}.error {    color: red;    font-weight: 500;    /*font-size: 35px;*/}
